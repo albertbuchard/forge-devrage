@@ -1,13 +1,13 @@
 {
   "name": "forge-devrage",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": false,
   "type": "module",
   "description": "Local-first profanity and frustration metrics for AI-agent conversation logs.",
   "license": "MIT",
   "bin": {
-    "forge-devrage": "./dist/cli.js",
-    "devrage": "./dist/cli.js"
+    "forge-devrage": "dist/cli.js",
+    "devrage": "dist/cli.js"
   },
   "exports": {
     ".": {
@@ -31,7 +31,8 @@
     "report": "tsx src/cli.ts",
     "build": "tsc -p tsconfig.json",
     "check": "tsc -p tsconfig.json --noEmit",
-    "test": "tsx --test src/**/*.test.ts"
+    "test": "tsx --test src/**/*.test.ts",
+    "prepare": "npm run build"
   },
   "engines": {
     "node": ">=20"
