@@ -1,0 +1,52 @@
+{
+  "name": "forge-devrage",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "description": "Local-first profanity and frustration metrics for AI-agent conversation logs.",
+  "license": "MIT",
+  "bin": {
+    "forge-devrage": "./dist/cli.js",
+    "devrage": "./dist/cli.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "!dist/__tests__",
+    "README.md",
+    "LICENSE",
+    "NOTICE.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/albertbuchard/forge-devrage.git"
+  },
+  "scripts": {
+    "dev": "tsx src/cli.ts",
+    "report": "tsx src/cli.ts",
+    "build": "tsc -p tsconfig.json",
+    "check": "tsc -p tsconfig.json --noEmit",
+    "test": "tsx --test src/**/*.test.ts"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "commander": "^14.0.2",
+    "fast-glob": "^3.3.3",
+    "picocolors": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
+  },
+  "optionalDependencies": {
+    "better-sqlite3": "^11.10.0"
+  }
+}
